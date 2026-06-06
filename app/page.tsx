@@ -75,22 +75,28 @@ export default async function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center bg-green-950 overflow-hidden">
         <HeroVideo />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-green-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-green-900/80" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <Image
             src="/logo.png"
             alt="GLT North America"
             width={200}
             height={55}
-            className="h-14 w-auto mx-auto mb-8 brightness-0 invert"
+            className="h-14 w-auto mx-auto mb-8 brightness-0 invert drop-shadow-xl"
             priority
           />
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          <h1
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)" }}
+          >
             Teaching{" "}
             <span className="text-gold-400">New Creation</span>{" "}
             Realities in Christ Jesus
           </h1>
-          <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p
+            className="text-gray-200 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+            style={{ textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}
+          >
             A warm community of believers committed to God's Word, expressive worship, and transforming lives
             — with campuses in Houston, Dallas, and Calgary.
           </p>
