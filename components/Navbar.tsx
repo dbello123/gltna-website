@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -19,13 +20,15 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-sm border-b border-navy-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center text-navy-900 font-bold text-sm">
-              G
-            </div>
-            <span className="text-white font-semibold text-sm sm:text-base leading-tight">
-              GLT <span className="text-gold-400">North America</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="GLT North America"
+              width={140}
+              height={38}
+              className="h-9 w-auto brightness-0 invert"
+              priority
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-6">

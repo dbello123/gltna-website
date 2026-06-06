@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
 import LocationCard from "@/components/LocationCard";
 import SermonCard from "@/components/SermonCard";
 import EventCard from "@/components/EventCard";
+import VideoCard from "@/components/VideoCard";
 import {
   getLocations,
   getRecentSermons,
@@ -71,17 +73,25 @@ export default async function HomePage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center bg-navy-950 overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 30% 50%, #c9a227 0%, transparent 60%), radial-gradient(circle at 80% 20%, #244d70 0%, transparent 50%)",
-          }}
+        {/* Hero background — latest conference thumbnail */}
+        <Image
+          src="https://img.youtube.com/vi/3ofhRmGcDMo/maxresdefault.jpg"
+          alt="GGCNA 2026"
+          fill
+          className="object-cover opacity-25"
+          priority
+          unoptimized
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-navy-950/50 to-navy-950" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <p className="text-gold-400 text-sm font-semibold uppercase tracking-[0.2em] mb-6">
-            God's Love Tabernacle North America
-          </p>
+          <Image
+            src="/logo.png"
+            alt="GLT North America"
+            width={200}
+            height={55}
+            className="h-14 w-auto mx-auto mb-8 brightness-0 invert"
+            priority
+          />
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             Teaching{" "}
             <span className="text-gold-400">New Creation</span>{" "}
@@ -99,12 +109,12 @@ export default async function HomePage() {
               Find a Location
             </Link>
             <a
-              href="https://www.youtube.com/@gltna"
+              href="https://www.youtube.com/@GLTChurchWorldwide"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3.5 border border-white/20 hover:border-gold-400/50 text-white hover:text-gold-400 font-semibold rounded-full transition-colors flex items-center justify-center gap-2"
             >
-              <Play size={16} /> Watch Live
+              <Play size={16} fill="currentColor" /> Watch on YouTube
             </a>
           </div>
         </div>
@@ -172,6 +182,49 @@ export default async function HomePage() {
           </div>
         </section>
       )}
+
+      {/* Recent Videos */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-navy-800">
+        <div className="flex items-end justify-between mb-12">
+          <div>
+            <p className="text-gold-500 text-sm font-semibold uppercase tracking-wider mb-2">Watch & Listen</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">Recent Videos</h2>
+          </div>
+          <a
+            href="https://www.youtube.com/@GLTChurchWorldwide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex items-center gap-1 text-gold-400 hover:text-gold-300 text-sm font-medium transition-colors"
+          >
+            YouTube Channel <ArrowRight size={16} />
+          </a>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <VideoCard videoId="3ofhRmGcDMo" title="GGCNA 2026 — Grand Finale" subtitle="Great Grace Conference NA" />
+          <VideoCard videoId="QRjV22t5Zuw" title="GGCNA 2026 — Day 2 Evening" subtitle="Great Grace Conference NA" />
+          <VideoCard videoId="r0euQM08hNg" title="GGCNA 2026 — Day 2 Morning" subtitle="Great Grace Conference NA" />
+          <VideoCard videoId="LKPwcCMy0sk" title="GGCNA 2026 — Day 1" subtitle="Great Grace Conference NA" />
+        </div>
+        <div className="mt-10">
+          <p className="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-5">Apostolic Visits</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <VideoCard videoId="VCb5BIkweYk" title="Calgary Apostolic Visit — Day 2" subtitle="May 2025" />
+            <VideoCard videoId="-w-AUTV6Vc0" title="Calgary Apostolic Visit — Day 3" subtitle="May 2025" />
+            <VideoCard videoId="cpzJVJuypIs" title="GGC Opening Session" subtitle="April 2025" />
+            <VideoCard videoId="UPFohJb5VIg" title="GGC Day 2 Session" subtitle="April 2025" />
+          </div>
+        </div>
+        <div className="mt-6 text-center sm:hidden">
+          <a
+            href="https://www.youtube.com/@GLTChurchWorldwide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold-400 hover:text-gold-300 text-sm font-medium"
+          >
+            View YouTube Channel →
+          </a>
+        </div>
+      </section>
 
       {/* About Snippet */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-950">

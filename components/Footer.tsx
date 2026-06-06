@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const locations = [
   { city: "Houston, TX", address: "14435 Longview St", phone: "(832) 617-1222" },
@@ -12,21 +13,21 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center text-navy-900 font-bold text-sm">
-                G
-              </div>
-              <span className="text-white font-semibold">
-                GLT <span className="text-gold-400">North America</span>
-              </span>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="GLT North America"
+                width={160}
+                height={44}
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm leading-relaxed">
               Teaching New Creation Realities in Christ Jesus with all simplicity and clarity.
             </p>
-            <div className="mt-6 flex gap-4">
-              <a href="https://www.youtube.com/@gltna" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 transition-colors text-sm">YouTube</a>
-              <a href="#" className="hover:text-gold-400 transition-colors text-sm">Facebook</a>
-              <a href="#" className="hover:text-gold-400 transition-colors text-sm">Instagram</a>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <a href="https://www.youtube.com/@GLTChurchWorldwide" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 transition-colors text-sm">YouTube</a>
+              <a href="https://www.youtube.com/@ApostleSegunObadje" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 transition-colors text-sm">Apostle's Channel</a>
             </div>
           </div>
 
