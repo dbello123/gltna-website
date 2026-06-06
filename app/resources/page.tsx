@@ -15,18 +15,21 @@ const resources = [
         desc: "Full services, conferences, and special meetings from GLT International.",
         url: "https://www.youtube.com/@GLTChurchWorldwide",
         label: "YouTube Channel",
+        icon: "▶",
       },
       {
         title: "Apostle Segun Obadje",
         desc: "Morning Dew devotionals and personal messages from Apostle Segun Obadje.",
         url: "https://www.youtube.com/@ApostleSegunObadje",
         label: "YouTube Channel",
+        icon: "▶",
       },
       {
-        title: "GLT Mixlr — Live Audio",
-        desc: "Listen live to GLT services and meetings on Mixlr.",
-        url: "https://mixlr.com/glt-church",
+        title: "GLT Live on Mixlr",
+        desc: "Stream GLT services and special meetings live in audio on Mixlr.",
+        url: "https://pastor-segun-obadje.mixlr.com/",
         label: "Listen on Mixlr",
+        icon: "🎙",
       },
     ],
   },
@@ -34,27 +37,51 @@ const resources = [
     category: "GLT International",
     items: [
       {
-        title: "GLT Nigeria (International HQ)",
-        desc: "The global headquarters of God's Love Tabernacle International.",
-        url: "https://gltng.org",
-        label: "Visit Website",
+        title: "GLT Nigeria — International HQ",
+        desc: "The global headquarters of God's Love Tabernacle International. Resources, news, and events from HQ.",
+        url: "https://www.glt.church/",
+        label: "Visit glt.church",
+        icon: "🌍",
       },
       {
         title: "GLT North America",
-        desc: "The main GLT North America website with all campus information.",
+        desc: "Main GLTNA site with all campus information, sermons, and events.",
         url: "https://gltna.church",
-        label: "Visit Website",
+        label: "Visit gltna.church",
+        icon: "🏛",
       },
     ],
   },
   {
-    category: "Study & Growth",
+    category: "Follow Our Campuses",
     items: [
       {
-        title: "Morning Dew Devotional",
-        desc: "Daily devotionals from Apostle Segun Obadje to start your day in the Word.",
-        url: "https://www.youtube.com/@ApostleSegunObadje",
-        label: "Watch on YouTube",
+        title: "GLT Houston on Instagram",
+        desc: "Updates, events, and community moments from GLT Houston.",
+        url: "https://www.instagram.com/glthouston",
+        label: "@glthouston",
+        icon: "📷",
+      },
+      {
+        title: "GLT Dallas on Instagram",
+        desc: "Updates, events, and community moments from GLT Dallas.",
+        url: "https://www.instagram.com/gltdallas",
+        label: "@gltdallas",
+        icon: "📷",
+      },
+      {
+        title: "GLT Calgary on Instagram",
+        desc: "Updates, events, and community moments from GLT Calgary.",
+        url: "https://www.instagram.com/gltcalgary",
+        label: "@gltcalgary",
+        icon: "📷",
+      },
+      {
+        title: "GLT Houston on Facebook",
+        desc: "Connect with the GLT Houston community on Facebook.",
+        url: "https://www.facebook.com/glthouston",
+        label: "Facebook Page",
+        icon: "👥",
       },
     ],
   },
@@ -67,17 +94,17 @@ export default function ResourcesPage() {
         <p className="text-gold-500 text-sm font-semibold uppercase tracking-wider mb-4">Explore</p>
         <h1 className="text-4xl sm:text-5xl font-bold text-white">Resources</h1>
         <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-          Everything you need to stay connected — watch, listen, study, and grow.
+          Everything you need to stay connected — watch, listen, and follow your campus.
         </p>
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-16">
         {resources.map((group) => (
           <div key={group.category}>
-            <h2 className="text-xl font-bold text-gold-400 uppercase tracking-wider mb-6 border-b border-navy-700 pb-3">
+            <h2 className="text-sm font-bold text-gold-400 uppercase tracking-widest mb-6 border-b border-navy-700 pb-3">
               {group.category}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {group.items.map((item) => (
                 <a
                   key={item.title}
@@ -87,10 +114,13 @@ export default function ResourcesPage() {
                   className="bg-navy-800 rounded-2xl p-6 border border-navy-700 hover:border-gold-500/50 transition-colors group flex flex-col"
                 >
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="text-white font-bold text-base group-hover:text-gold-400 transition-colors">
-                      {item.title}
-                    </h3>
-                    <ExternalLink size={16} className="text-gray-500 group-hover:text-gold-400 shrink-0 mt-0.5 transition-colors" />
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">{item.icon}</span>
+                      <h3 className="text-white font-bold text-sm group-hover:text-gold-400 transition-colors leading-snug">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <ExternalLink size={14} className="text-gray-500 group-hover:text-gold-400 shrink-0 mt-0.5 transition-colors" />
                   </div>
                   <p className="text-gray-400 text-sm leading-relaxed flex-1 mb-4">{item.desc}</p>
                   <span className="text-gold-500 text-xs font-semibold uppercase tracking-wider">
