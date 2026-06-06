@@ -10,6 +10,7 @@ const links = [
   { href: "/sermons", label: "Sermons" },
   { href: "/events", label: "Events" },
   { href: "/locations", label: "Locations" },
+  { href: "/resources", label: "Resources" },
   { href: "/give", label: "Give" },
 ];
 

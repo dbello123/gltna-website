@@ -14,8 +14,8 @@ const FEATURED_EVENT = {
   description:
     "The annual Great Grace Conference is a Spirit-filled gathering of believers from across North America for teaching, worship, and encounter with God.",
   startDate: "2026-08-01T09:00:00Z",
-  venue: "Austin Convention Center",
-  city: "Austin",
+  venue: "Houston Convention Center",
+  city: "Houston",
   stateProvince: "TX",
   registrationUrl: "https://gltna.church",
   featured: true,

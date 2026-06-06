@@ -23,6 +23,7 @@ const ARCHIVE_VIDEOS = [
   { id: "A0tLiec9e2E", title: "GGCNA 2024 — Day 2 Morning", subtitle: "Great Grace Conference NA 2024" },
   { id: "EtAZVqGj4WY", title: "GGCNA 2024 — Day 2 Evening", subtitle: "Great Grace Conference NA 2024" },
   { id: "U5Adj8mjIgI", title: "GGCNA 2024 — Grand Finale", subtitle: "Great Grace Conference NA 2024" },
+  { id: "8GYiTwpVMpY", title: "Dallas Apostolic Visit", subtitle: "Apostle Segun Obadje at GLT Dallas" },
 ];
 
 export default async function SermonsPage() {

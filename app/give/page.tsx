@@ -18,10 +18,16 @@ export default function GivePage() {
     <>
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-950 text-center">
         <p className="text-gold-500 text-sm font-semibold uppercase tracking-wider mb-4">Partner With Us</p>
-        <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Give</h1>
-        <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
+        <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">Give</h1>
+        <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed mb-4">
           "Give, and it will be given to you — a good measure, pressed down, shaken together,
           and running over." — Luke 6:38
+        </p>
+        <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          As a member of the diaspora community, your giving carries a global impact. Every gift you sow
+          into GLT North America helps us preach the Word in our cities, equip believers to walk in their
+          New Creation identity, and support the advancement of God's kingdom across the nations.
+          You are not just giving to a church — you are partnering with a global mission.
         </p>
       </section>
 

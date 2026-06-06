@@ -16,7 +16,7 @@ import {
 const FALLBACK_LOCATIONS: Location[] = [
   {
     _id: "houston",
-    name: "Houston",
+    name: "GLT Houston",
     address: "14435 Longview St",
     city: "Houston",
     stateProvince: "TX",
@@ -29,7 +29,7 @@ const FALLBACK_LOCATIONS: Location[] = [
   },
   {
     _id: "dallas",
-    name: "Dallas",
+    name: "GLT Dallas",
     address: "777 Central Expy Suite 7T",
     city: "Dallas",
     stateProvince: "TX",
@@ -42,7 +42,7 @@ const FALLBACK_LOCATIONS: Location[] = [
   },
   {
     _id: "calgary",
-    name: "Calgary",
+    name: "GLT Calgary",
     address: "2221 41 Ave NE Bay 16",
     city: "Calgary",
     stateProvince: "AB",

@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getLocations, type Location } from "@/lib/queries";
 import LocationCard from "@/components/LocationCard";
 
 export const metadata: Metadata = {
   title: "Locations",
-  description: "Find a GLT North America campus near you — Houston TX, Dallas TX, and Calgary AB.",
+  description: "Find a GLT North America campus near you — GLT Houston TX, GLT Dallas TX, and GLT Calgary AB.",
 };
 
 const FALLBACK_LOCATIONS: Location[] = [
   {
     _id: "houston",
-    name: "Houston",
+    name: "GLT Houston",
     address: "14435 Longview St",
     city: "Houston",
     stateProvince: "TX",
@@ -24,21 +25,21 @@ const FALLBACK_LOCATIONS: Location[] = [
   },
   {
     _id: "dallas",
-    name: "Dallas",
+    name: "GLT Dallas",
     address: "777 Central Expy Suite 7T",
     city: "Dallas",
     stateProvince: "TX",
     country: "USA",
     phone: "(469) 215-7389",
     sundayTime: "9:00 AM",
-    mondayTime: "6:30 PM",
+    mondayTime: "6:30 PM on Zoom",
     wednesdayTime: "6:30 PM",
     slug: { current: "dallas" },
     mapUrl: "https://maps.google.com/?q=777+Central+Expy+Suite+7T+Dallas+TX",
   },
   {
     _id: "calgary",
-    name: "Calgary",
+    name: "GLT Calgary",
     address: "2221 41 Ave NE Bay 16",
     city: "Calgary",
     stateProvince: "AB",
@@ -67,11 +68,28 @@ export default async function LocationsPage() {
         <p className="text-gold-500 text-sm font-semibold uppercase tracking-wider mb-4">Find Us</p>
         <h1 className="text-4xl sm:text-5xl font-bold text-white">Our Locations</h1>
         <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-          We have three campuses across North America. Come worship with us!
+          Three campuses across North America. Come worship with us!
         </p>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      {/* Extension photos */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div className="relative h-56 rounded-2xl overflow-hidden">
+            <Image src="/campus-dallas-photo.jpg" alt="GLT Dallas" fill className="object-cover" />
+            <div className="absolute inset-0 bg-navy-950/40" />
+            <p className="absolute bottom-4 left-4 text-white font-bold text-lg drop-shadow">GLT Dallas</p>
+          </div>
+          <div className="relative h-56 rounded-2xl overflow-hidden">
+            <Image src="/campus-dallas2.png" alt="GLT Calgary" fill className="object-cover" />
+            <div className="absolute inset-0 bg-navy-950/40" />
+            <p className="absolute bottom-4 left-4 text-white font-bold text-lg drop-shadow">GLT Calgary</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Location cards */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {locations.map((loc) => (
             <LocationCard key={loc._id} loc={loc} />
@@ -84,7 +102,7 @@ export default async function LocationsPage() {
             Can't make it in person? Watch our services live or catch up on recent messages on YouTube.
           </p>
           <a
-            href="https://www.youtube.com/@gltna"
+            href="https://www.youtube.com/@GLTChurchWorldwide"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-full transition-colors"
