@@ -74,8 +74,8 @@ export default async function HomePage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center bg-green-950 overflow-hidden">
-        <HeroVideo videoId="sCZw3R_ViUU" />
-        <div className="absolute inset-0 bg-gradient-to-b from-green-950/10 via-transparent to-green-900" />
+        <HeroVideo />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-green-900" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <Image
             src="/logo.png"
