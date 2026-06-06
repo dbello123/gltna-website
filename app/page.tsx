@@ -5,6 +5,7 @@ import LocationCard from "@/components/LocationCard";
 import SermonCard from "@/components/SermonCard";
 import EventCard from "@/components/EventCard";
 import VideoCard from "@/components/VideoCard";
+import HeroVideo from "@/components/HeroVideo";
 import {
   getLocations,
   getRecentSermons,
@@ -72,17 +73,9 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center bg-navy-950 overflow-hidden">
-        {/* Hero background — latest conference thumbnail */}
-        <Image
-          src="https://img.youtube.com/vi/3ofhRmGcDMo/maxresdefault.jpg"
-          alt="GGCNA 2026"
-          fill
-          className="object-cover opacity-25"
-          priority
-          unoptimized
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-navy-950/50 to-navy-950" />
+      <section className="relative min-h-[90vh] flex items-center justify-center bg-green-950 overflow-hidden">
+        <HeroVideo videoId="sCZw3R_ViUU" />
+        <div className="absolute inset-0 bg-gradient-to-b from-green-950/10 via-transparent to-green-900" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <Image
             src="/logo.png"
@@ -227,7 +220,7 @@ export default async function HomePage() {
       </section>
 
       {/* About Snippet */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-950">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-green-950">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gold-500 text-sm font-semibold uppercase tracking-wider mb-4">Who We Are</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
