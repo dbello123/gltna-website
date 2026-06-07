@@ -73,7 +73,7 @@ export default async function LocationsPage() {
       </section>
 
       {/* Extension photos */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div className="relative h-56 rounded-2xl overflow-hidden shadow-md">
             <Image src="/campus-dallas-photo.jpg" alt="GLT Dallas" fill className="object-cover" />
@@ -89,7 +89,7 @@ export default async function LocationsPage() {
       </section>
 
       {/* Location cards */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <section className="py-8 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {locations.map((loc) => (
             <LocationCard key={loc._id} loc={loc} />

@@ -43,7 +43,7 @@ export default async function EventsPage() {
         </p>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-white">
         <div className="flex flex-col gap-5">
           {events.map((event) => (
             <EventCard key={event._id} event={event} />

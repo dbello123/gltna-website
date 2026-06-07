@@ -75,7 +75,7 @@ export default async function SermonsPage() {
       )}
 
       {/* Video archive from YouTube */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-100">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-brand-100 bg-white">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">Video Archive</h2>
         <p className="text-gray-500 text-sm mb-8">Click any video to watch directly on this page.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

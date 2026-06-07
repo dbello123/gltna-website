@@ -120,7 +120,7 @@ export default async function HomePage() {
       </section>
 
       {/* Locations */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-brand-50">
         <div className="text-center mb-12">
           <p className="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-2">Join Us</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our Locations</h2>
@@ -131,6 +131,7 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
+
 
       {/* Upcoming Events */}
       {upcomingEvents.length > 0 && (
@@ -159,7 +160,7 @@ export default async function HomePage() {
 
       {/* Recent Sermons */}
       {recentSermons.length > 0 && (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-100">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-brand-100 bg-white">
           <div className="flex items-end justify-between mb-12">
             <div>
               <p className="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-2">The Word</p>
@@ -183,7 +184,7 @@ export default async function HomePage() {
       )}
 
       {/* Recent Videos */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-100 bg-brand-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-brand-100">
         <div className="flex items-end justify-between mb-12">
           <div>
             <p className="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-2">Watch & Listen</p>

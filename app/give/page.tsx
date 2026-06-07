@@ -32,7 +32,7 @@ export default function GivePage() {
       </section>
 
       {/* Giving options */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-white">
         <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Ways to Give</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
           {[

@@ -98,7 +98,7 @@ export default function ResourcesPage() {
         </p>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-16 bg-white">
         {resources.map((group) => (
           <div key={group.category}>
             <h2 className="text-sm font-bold text-brand-500 uppercase tracking-widest mb-6 border-b border-gray-200 pb-3">

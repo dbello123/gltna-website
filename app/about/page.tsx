@@ -35,7 +35,7 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Founders */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-2">Leadership</p>
@@ -132,6 +132,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-2">Our DNA</p>
+
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">The Onions of GLT</h2>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
               Eleven defining traits that shape who we are, how we worship, and how we relate to God and one another.
