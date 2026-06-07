@@ -5,7 +5,7 @@ import LocationCard from "@/components/LocationCard";
 
 export const metadata: Metadata = {
   title: "Locations",
-  description: "Find a GLT North America campus near you — GLT Houston TX, GLT Dallas TX, and GLT Calgary AB.",
+  description: "Find a GLT North America extension near you — GLT Houston TX, GLT Dallas TX, and GLT Calgary AB.",
 };
 
 const FALLBACK_LOCATIONS: Location[] = [
@@ -68,7 +68,7 @@ export default async function LocationsPage() {
         <p className="text-gold-500 text-sm font-semibold uppercase tracking-wider mb-4">Find Us</p>
         <h1 className="text-4xl sm:text-5xl font-bold text-white">Our Locations</h1>
         <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-          Three campuses across North America. Come worship with us!
+          Three extensions across North America. Come worship with us!
         </p>
       </section>
 

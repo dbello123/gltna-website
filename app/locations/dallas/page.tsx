@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description: "GLT Dallas — 777 Central Expy Suite 7T, Dallas TX. Sunday 9:00 AM. Part of GLT North America.",
 };
 
+const ZOOM_URL = "https://us02web.zoom.us/j/89163979754?pwd=QllOREZmbldmbXlBcnhjM2xyVG93Zz09";
+const ZOOM_NOTE = "Also via Zoom · ID: 891 6397 9754 · Code: 073450";
+
 export default function DallasPage() {
   return (
     <ExtensionPage
@@ -21,13 +24,8 @@ export default function DallasPage() {
       about="GLT Dallas is a growing extension of God's Love Tabernacle International in the Dallas-Fort Worth metroplex. We are a Word-centred, Spirit-filled community dedicated to raising New Creation believers who walk confidently in their identity in Christ."
       services={[
         { day: "Sunday Service", time: "9:00 AM" },
-        {
-          day: "Monday Prayer Meeting",
-          time: "6:30 PM",
-          note: "Held online via Zoom",
-          zoomUrl: "https://zoom.us",
-        },
-        { day: "Wednesday Bible Study", time: "6:30 PM" },
+        { day: "Monday Prayer Meeting", time: "6:30 PM", note: ZOOM_NOTE, zoomUrl: ZOOM_URL },
+        { day: "Wednesday Bible Study", time: "6:30 PM", note: ZOOM_NOTE, zoomUrl: ZOOM_URL },
       ]}
       instagramUrl="https://www.instagram.com/gltdallas"
       instagramHandle="@gltdallas"

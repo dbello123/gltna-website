@@ -39,7 +39,7 @@ export default async function EventsPage() {
         <p className="text-gold-500 text-sm font-semibold uppercase tracking-wider mb-4">What's Happening</p>
         <h1 className="text-4xl sm:text-5xl font-bold text-white">Events</h1>
         <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-          Conferences, special services, and gatherings across our North American campuses.
+          Conferences, special services, and gatherings across our North American extensions.
         </p>
       </section>
 

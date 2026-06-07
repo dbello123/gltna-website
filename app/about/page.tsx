@@ -122,7 +122,7 @@ export default function AboutPage() {
           <p className="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-4">Our Mission</p>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Raising New Creation Believers</h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            GLT North America is an extension of God's Love Tabernacle International — a global ministry headquartered in Nigeria. Our mandate is to raise a generation of Word-driven, Spirit-filled believers who know who they are in Christ and walk in the fullness of that identity in every area of life, with campuses in <strong className="text-gray-900">Houston, TX</strong>, <strong className="text-gray-900">Dallas, TX</strong>, and <strong className="text-gray-900">Calgary, AB</strong>.
+            GLT North America is an extension of God's Love Tabernacle International — a global ministry headquartered in Nigeria. Our mandate is to raise a generation of Word-driven, Spirit-filled believers who know who they are in Christ and walk in the fullness of that identity in every area of life, with extensions in <strong className="text-gray-900">Houston, TX</strong>, <strong className="text-gray-900">Dallas, TX</strong>, and <strong className="text-gray-900">Calgary, AB</strong>.
           </p>
         </div>
       </section>

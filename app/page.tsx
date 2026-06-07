@@ -98,7 +98,7 @@ export default async function HomePage() {
             style={{ textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}
           >
             A warm community of believers committed to God's Word, expressive worship, and transforming lives
-            — with campuses in Houston, Dallas, and Calgary.
+            — with extensions in Houston, Dallas, and Calgary.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -14,10 +14,17 @@ const SLUG: Record<string, string> = {
   "GLT Calgary": "calgary",
 };
 
+/* Which services are on Zoom per extension */
+const ZOOM: Record<string, { sunday?: boolean; monday?: boolean; wednesday?: boolean }> = {
+  "GLT Houston": { sunday: true, monday: true, wednesday: true },
+  "GLT Dallas": { monday: true, wednesday: true },
+  "GLT Calgary": { monday: true, wednesday: true },
+};
+
 export default function LocationCard({ loc }: { loc: Location }) {
   const slug = SLUG[loc.name] ?? loc.slug?.current;
   const instagram = INSTAGRAM[loc.name];
-  const isDallasMonday = loc.name === "GLT Dallas";
+  const zoom = ZOOM[loc.name] ?? {};
 
   return (
     <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-brand-400/60 hover:shadow-md transition-all flex flex-col">
@@ -47,9 +54,16 @@ export default function LocationCard({ loc }: { loc: Location }) {
         </div>
         <ul className="space-y-2 text-sm">
           {loc.sundayTime && (
-            <li className="flex justify-between items-center">
-              <span className="text-gray-500">Sunday</span>
-              <span className="text-gray-900 font-semibold">{loc.sundayTime}</span>
+            <li className="flex justify-between items-start gap-2">
+              <span className="text-gray-500 shrink-0">Sunday</span>
+              <div className="text-right">
+                <span className="text-gray-900 font-semibold block">{loc.sundayTime}</span>
+                {zoom.sunday && (
+                  <span className="inline-flex items-center gap-1 text-xs text-blue-600 mt-0.5">
+                    <Video size={10} /> Also on Zoom
+                  </span>
+                )}
+              </div>
             </li>
           )}
           {loc.mondayTime && (
@@ -57,18 +71,25 @@ export default function LocationCard({ loc }: { loc: Location }) {
               <span className="text-gray-500 shrink-0">Monday Prayer</span>
               <div className="text-right">
                 <span className="text-gray-900 font-semibold block">{loc.mondayTime}</span>
-                {isDallasMonday && (
+                {zoom.monday && (
                   <span className="inline-flex items-center gap-1 text-xs text-blue-600 mt-0.5">
-                    <Video size={10} /> Online via Zoom
+                    <Video size={10} /> Also on Zoom
                   </span>
                 )}
               </div>
             </li>
           )}
           {loc.wednesdayTime && (
-            <li className="flex justify-between items-center">
-              <span className="text-gray-500">Wednesday Bible Study</span>
-              <span className="text-gray-900 font-semibold">{loc.wednesdayTime}</span>
+            <li className="flex justify-between items-start gap-2">
+              <span className="text-gray-500 shrink-0">Wednesday Bible Study</span>
+              <div className="text-right">
+                <span className="text-gray-900 font-semibold block">{loc.wednesdayTime}</span>
+                {zoom.wednesday && (
+                  <span className="inline-flex items-center gap-1 text-xs text-blue-600 mt-0.5">
+                    <Video size={10} /> Also on Zoom
+                  </span>
+                )}
+              </div>
             </li>
           )}
         </ul>
@@ -91,7 +112,7 @@ export default function LocationCard({ loc }: { loc: Location }) {
             href={`/locations/${slug}`}
             className="block text-center text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors border border-brand-200 hover:border-brand-400 rounded-lg py-2"
           >
-            View Campus Page →
+            View Extension Page →
           </Link>
         )}
         {loc.mapUrl && (

@@ -45,7 +45,7 @@ const resources = [
       },
       {
         title: "GLT North America",
-        desc: "Main GLTNA site with all campus information, sermons, and events.",
+        desc: "Main GLTNA site with all extension information, sermons, and events.",
         url: "https://gltna.church",
         label: "Visit gltna.church",
         icon: "🏛",
@@ -53,7 +53,7 @@ const resources = [
     ],
   },
   {
-    category: "Follow Our Campuses",
+    category: "Follow Our Extensions",
     items: [
       {
         title: "GLT Houston on Instagram",
@@ -94,7 +94,7 @@ export default function ResourcesPage() {
         <p className="text-gold-500 text-sm font-semibold uppercase tracking-wider mb-4">Explore</p>
         <h1 className="text-4xl sm:text-5xl font-bold text-white">Resources</h1>
         <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-          Everything you need to stay connected — watch, listen, and follow your campus.
+          Everything you need to stay connected — watch, listen, and follow your extension.
         </p>
       </section>
 

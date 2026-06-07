@@ -10,7 +10,7 @@ const impacts = [
   { icon: BookOpen, title: "Teaching the Word", desc: "Funding sermon recordings, media production, and outreach materials." },
   { icon: Globe, title: "Global Evangelism", desc: "Supporting mission work in Africa and beyond through the GLT network." },
   { icon: Users, title: "Community Care", desc: "Feeding programs, counselling, and support for families in need." },
-  { icon: Heart, title: "Campus Growth", desc: "Building and sustaining our campuses in Houston, Dallas, and Calgary." },
+  { icon: Heart, title: "Extension Growth", desc: "Building and sustaining our extensions in Houston, Dallas, and Calgary." },
 ];
 
 export default function GivePage() {
@@ -44,14 +44,14 @@ export default function GivePage() {
               primary: true,
             },
             {
-              title: "Houston Campus",
+              title: "Houston Extension",
               desc: "Drop your offering envelope at the Houston location.",
               cta: "(832) 617-1222",
               href: "tel:8326171222",
               primary: false,
             },
             {
-              title: "Dallas Campus",
+              title: "Dallas Extension",
               desc: "Drop your offering envelope at the Dallas location.",
               cta: "(469) 215-7389",
               href: "tel:4692157389",
@@ -80,7 +80,7 @@ export default function GivePage() {
         {/* Calgary */}
         <div className="bg-brand-50 rounded-xl p-5 border border-brand-100 text-center mb-16">
           <p className="text-gray-600 text-sm">
-            <strong className="text-gray-900">Calgary Campus:</strong> Contact us at{" "}
+            <strong className="text-gray-900">Calgary Extension:</strong> Contact us at{" "}
             <a href="tel:8254882564" className="text-brand-600 hover:text-brand-700">(825) 488-2564</a> for giving options.
           </p>
         </div>
