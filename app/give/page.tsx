@@ -33,7 +33,7 @@ export default function GivePage() {
 
       {/* Giving options */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold text-white mb-8 text-center">Ways to Give</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Ways to Give</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
           {[
             {
@@ -58,17 +58,17 @@ export default function GivePage() {
               primary: false,
             },
           ].map((option) => (
-            <div key={option.title} className="bg-navy-800 rounded-2xl p-6 border border-navy-700 flex flex-col">
-              <h3 className="text-white font-bold mb-2">{option.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{option.desc}</p>
+            <div key={option.title} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col">
+              <h3 className="text-gray-900 font-bold mb-2">{option.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">{option.desc}</p>
               <a
                 href={option.href}
                 target={option.href.startsWith("http") ? "_blank" : undefined}
                 rel={option.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className={`block text-center py-2.5 rounded-full text-sm font-semibold transition-colors ${
                   option.primary
-                    ? "bg-gold-500 hover:bg-gold-400 text-navy-900"
-                    : "border border-gold-500/40 hover:border-gold-400 text-gold-400"
+                    ? "bg-brand-500 hover:bg-brand-600 text-white"
+                    : "border border-brand-200 hover:border-brand-400 text-brand-600"
                 }`}
               >
                 {option.cta}
@@ -78,24 +78,24 @@ export default function GivePage() {
         </div>
 
         {/* Calgary */}
-        <div className="bg-navy-800 rounded-xl p-5 border border-navy-700 text-center mb-16">
-          <p className="text-gray-400 text-sm">
-            <strong className="text-white">Calgary Campus:</strong> Contact us at{" "}
-            <a href="tel:8254882564" className="text-gold-400 hover:text-gold-300">(825) 488-2564</a> for giving options.
+        <div className="bg-brand-50 rounded-xl p-5 border border-brand-100 text-center mb-16">
+          <p className="text-gray-600 text-sm">
+            <strong className="text-gray-900">Calgary Campus:</strong> Contact us at{" "}
+            <a href="tel:8254882564" className="text-brand-600 hover:text-brand-700">(825) 488-2564</a> for giving options.
           </p>
         </div>
 
         {/* Impact */}
-        <h2 className="text-2xl font-bold text-white mb-8 text-center">Your Giving Makes an Impact</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Your Giving Makes an Impact</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {impacts.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="flex gap-4 bg-navy-800 rounded-xl p-5 border border-navy-700">
-              <div className="w-10 h-10 bg-gold-500/10 rounded-full flex items-center justify-center shrink-0">
-                <Icon size={18} className="text-gold-400" />
+            <div key={title} className="flex gap-4 bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+              <div className="w-10 h-10 bg-brand-50 rounded-full flex items-center justify-center shrink-0">
+                <Icon size={18} className="text-brand-500" />
               </div>
               <div>
-                <h3 className="text-white font-semibold mb-1">{title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
+                <h3 className="text-gray-900 font-semibold mb-1">{title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
               </div>
             </div>
           ))}

@@ -75,12 +75,12 @@ export default async function LocationsPage() {
       {/* Extension photos */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-          <div className="relative h-56 rounded-2xl overflow-hidden">
+          <div className="relative h-56 rounded-2xl overflow-hidden shadow-md">
             <Image src="/campus-dallas-photo.jpg" alt="GLT Dallas" fill className="object-cover" />
             <div className="absolute inset-0 bg-navy-950/40" />
             <p className="absolute bottom-4 left-4 text-white font-bold text-lg drop-shadow">GLT Dallas</p>
           </div>
-          <div className="relative h-56 rounded-2xl overflow-hidden">
+          <div className="relative h-56 rounded-2xl overflow-hidden shadow-md">
             <Image src="/campus-dallas2.png" alt="GLT Calgary" fill className="object-cover" />
             <div className="absolute inset-0 bg-navy-950/40" />
             <p className="absolute bottom-4 left-4 text-white font-bold text-lg drop-shadow">GLT Calgary</p>
@@ -96,16 +96,16 @@ export default async function LocationsPage() {
           ))}
         </div>
 
-        <div className="bg-navy-800 rounded-2xl p-8 border border-navy-700 text-center max-w-2xl mx-auto">
-          <h3 className="text-white font-bold text-xl mb-3">Join Us Online</h3>
-          <p className="text-gray-400 mb-6">
+        <div className="bg-brand-50 rounded-2xl p-8 border border-brand-100 text-center max-w-2xl mx-auto">
+          <h3 className="text-gray-900 font-bold text-xl mb-3">Join Us Online</h3>
+          <p className="text-gray-600 mb-6">
             Can't make it in person? Watch our services live or catch up on recent messages on YouTube.
           </p>
           <a
             href="https://www.youtube.com/@GLTChurchWorldwide"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-full transition-colors"
+            className="inline-block px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-full transition-colors"
           >
             Watch on YouTube
           </a>

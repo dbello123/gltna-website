@@ -101,7 +101,7 @@ export default function ResourcesPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-16">
         {resources.map((group) => (
           <div key={group.category}>
-            <h2 className="text-sm font-bold text-gold-400 uppercase tracking-widest mb-6 border-b border-navy-700 pb-3">
+            <h2 className="text-sm font-bold text-brand-500 uppercase tracking-widest mb-6 border-b border-gray-200 pb-3">
               {group.category}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -111,19 +111,19 @@ export default function ResourcesPage() {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-navy-800 rounded-2xl p-6 border border-navy-700 hover:border-gold-500/50 transition-colors group flex flex-col"
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-brand-300 hover:shadow-md transition-all group flex flex-col"
                 >
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div className="flex items-center gap-2">
                       <span className="text-xl">{item.icon}</span>
-                      <h3 className="text-white font-bold text-sm group-hover:text-gold-400 transition-colors leading-snug">
+                      <h3 className="text-gray-900 font-bold text-sm group-hover:text-brand-600 transition-colors leading-snug">
                         {item.title}
                       </h3>
                     </div>
-                    <ExternalLink size={14} className="text-gray-500 group-hover:text-gold-400 shrink-0 mt-0.5 transition-colors" />
+                    <ExternalLink size={14} className="text-gray-400 group-hover:text-brand-500 shrink-0 mt-0.5 transition-colors" />
                   </div>
-                  <p className="text-gray-400 text-sm leading-relaxed flex-1 mb-4">{item.desc}</p>
-                  <span className="text-gold-500 text-xs font-semibold uppercase tracking-wider">
+                  <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-4">{item.desc}</p>
+                  <span className="text-brand-500 text-xs font-semibold uppercase tracking-wider">
                     {item.label} →
                   </span>
                 </a>

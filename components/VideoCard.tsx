@@ -18,9 +18,9 @@ export default function VideoCard({ videoId, title, subtitle }: VideoCardProps) 
     <>
       <button
         onClick={() => setPlaying(true)}
-        className="group relative w-full rounded-2xl overflow-hidden bg-navy-800 border border-navy-700 hover:border-gold-500/40 transition-colors text-left"
+        className="group relative w-full rounded-2xl overflow-hidden bg-white border border-gray-200 hover:border-brand-400/60 hover:shadow-md transition-all text-left"
       >
-        <div className="relative h-44 bg-navy-700">
+        <div className="relative h-44 bg-gray-100">
           <Image
             src={thumb}
             alt={title}
@@ -28,15 +28,15 @@ export default function VideoCard({ videoId, title, subtitle }: VideoCardProps) 
             className="object-cover group-hover:scale-105 transition-transform duration-300"
             unoptimized
           />
-          <div className="absolute inset-0 bg-navy-900/30 group-hover:bg-navy-900/10 transition-colors" />
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-14 h-14 bg-gold-500/90 group-hover:bg-gold-400 rounded-full flex items-center justify-center shadow-lg transition-colors">
-              <Play size={22} className="text-navy-900 ml-1" fill="currentColor" />
+              <Play size={22} className="text-white ml-1" fill="currentColor" />
             </div>
           </div>
         </div>
         <div className="p-4">
-          <h3 className="text-white font-semibold text-sm leading-snug line-clamp-2">{title}</h3>
+          <h3 className="text-gray-900 font-semibold text-sm leading-snug line-clamp-2">{title}</h3>
           {subtitle && <p className="text-gray-500 text-xs mt-1">{subtitle}</p>}
         </div>
       </button>

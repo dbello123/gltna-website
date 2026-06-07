@@ -47,7 +47,7 @@ export default async function SermonsPage() {
             href="https://www.youtube.com/@GLTChurchWorldwide"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-full text-sm transition-colors"
+            className="px-5 py-2.5 bg-gold-500 hover:bg-gold-400 text-white font-semibold rounded-full text-sm transition-colors"
           >
             GLT Church Worldwide
           </a>
@@ -65,7 +65,7 @@ export default async function SermonsPage() {
       {/* CMS-managed sermons (when added via /studio) */}
       {sermons.length > 0 && (
         <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-8">Latest Messages</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Messages</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {sermons.map((sermon) => (
               <SermonCard key={sermon._id} sermon={sermon} />
@@ -75,8 +75,8 @@ export default async function SermonsPage() {
       )}
 
       {/* Video archive from YouTube */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-navy-800">
-        <h2 className="text-2xl font-bold text-white mb-2">Video Archive</h2>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-100">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Video Archive</h2>
         <p className="text-gray-500 text-sm mb-8">Click any video to watch directly on this page.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {ARCHIVE_VIDEOS.map((v) => (

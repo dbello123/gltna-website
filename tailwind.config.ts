@@ -9,36 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        /* GLT green palette — brand color #47704c */
+        /* Dark palette — hero, page headers, footer only */
         navy: {
           950: "#0c1a0d",
           900: "#162919",
           800: "#1f3c22",
           700: "#2d5531",
-          600: "#3d6941",
-          500: "#47704c",
         },
-        green: {
-          950: "#0c1a0d",
-          900: "#162919",
-          800: "#1f3c22",
-          700: "#2d5531",
-          600: "#3d6941",
-          500: "#47704c",
-          400: "#5a8a5f",
-          300: "#7aaa7f",
+        /* GLT green — accents, icons, buttons */
+        brand: {
+          50:  "#f0f7f1",
+          100: "#daeedd",
+          200: "#b5ddb9",
+          300: "#7aba80",
+          400: "#5a9960",
+          500: "#47704c",   /* GLT brand green */
+          600: "#3a5d3f",
+          700: "#2d4d31",
+          800: "#213a24",
+          900: "#152618",
         },
         gold: {
           300: "#e8d48b",
           400: "#dfc46a",
           500: "#c9a227",
           600: "#b08d1f",
-          700: "#8a6e18",
         },
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        serif: ["Georgia", "ui-serif", "serif"],
       },
     },
   },

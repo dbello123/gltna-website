@@ -26,7 +26,6 @@ export default async function EventsPage() {
   try {
     events = await getUpcomingEvents(20);
   } catch {
-    // CMS not configured yet — show the static featured event
     events = [FEATURED_EVENT as any];
   }
 
